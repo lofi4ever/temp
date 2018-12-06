@@ -132,3 +132,54 @@
 		margin-top: 23px
 		margin-left: auto
 		margin-right: auto
+
+.socials
+	background-color: #fff
+	padding: 80px 0 130px
+	&-block
+		text-align: center
+		&__h
+			text-align: center
+			font-size: 30px
+			font-weight: 400
+			line-height: 26.1px
+			color: #090909
+		&__list
+			list-style-type: none
+			display: inline-block
+			padding-left: 0
+			margin-top: 55px
+		&__item
+			display: inline-block
+			width: 68px
+			height: 68px
+			background-image: url(../img/soc-sprite.png)
+			background-size: auto 68px
+			background-repeat: no-repeat
+			&:not(:last-child)
+				margin-right: 5px
+			&--facebook
+				background-position: 0 0
+			&--vk
+				background-position: -82px 0
+			&--ok
+				background-position: -161px 0
+			&--inst
+				background-position: -242px 0
+			&--twitter
+				background-position: -321px 0
+		&__link
+			display: block
+			width: 100%
+			height: 100%
+
+.services
+	display: table
+	table-layout: fixed
+	width: 100%
+	&-block
+		display: table-cell
+		&__h
+			text-transform: uppercase
+			color: $accent
+			font-size: 18px

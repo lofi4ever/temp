@@ -93,6 +93,34 @@ body {
   font-size: 29px;
 }
 
+.footer {
+  background-color: #fff;
+  padding-bottom: 64px;
+}
+
+.footer__logo {
+  max-width: 243px;
+  float: left;
+}
+
+.footer__logo img {
+  display: block;
+  width: 100%;
+}
+
+.footer__info {
+  float: right;
+  max-width: 210px;
+  text-transform: uppercase;
+  color: #000;
+  line-height: 17px;
+  font-size: 14px;
+}
+
+.footer__info-line:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .banner {
   min-height: 540px;
   position: relative;
@@ -281,6 +309,85 @@ body {
   margin-right: auto;
 }
 
+.socials {
+  background-color: #fff;
+  padding: 80px 0 130px;
+}
+
+.socials-block {
+  text-align: center;
+}
+
+.socials-block__h {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 26.1px;
+  color: #090909;
+}
+
+.socials-block__list {
+  list-style-type: none;
+  display: inline-block;
+  padding-left: 0;
+  margin-top: 55px;
+}
+
+.socials-block__item {
+  display: inline-block;
+  width: 68px;
+  height: 68px;
+  background-image: url(../img/soc-sprite.png);
+  background-size: auto 68px;
+  background-repeat: no-repeat;
+}
+
+.socials-block__item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.socials-block__item--facebook {
+  background-position: 0 0;
+}
+
+.socials-block__item--vk {
+  background-position: -82px 0;
+}
+
+.socials-block__item--ok {
+  background-position: -161px 0;
+}
+
+.socials-block__item--inst {
+  background-position: -242px 0;
+}
+
+.socials-block__item--twitter {
+  background-position: -321px 0;
+}
+
+.socials-block__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.services {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.services-block {
+  display: table-cell;
+}
+
+.services-block__h {
+  text-transform: uppercase;
+  color: #d40f7d;
+  font-size: 18px;
+}
+
 .link {
   cursor: pointer;
 }
@@ -310,6 +417,67 @@ body {
 
 .btn--green {
   background-color: #93c622;
+}
+
+.checkbox__label {
+  position: relative;
+  padding: 8px 0 8px 52px;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #fff;
+  display: block;
+  cursor: pointer;
+}
+
+.checkbox__label .link-more {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.checkbox__label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 32px;
+  background-color: #fff;
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__input:checked ~ .checkbox__label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 42px;
+  height: 42px;
+  background-image: url(../img/icon-check.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.agreements-block {
+  text-align: center;
+}
+
+.agreements-block__inner {
+  display: inline-block;
+  text-align: left;
+}
+
+.agreements-block .checkbox:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 991px) {
+  .agreements-block__inner {
+    margin-right: -16%;
+  }
 }
 
 @media (max-width: 992px) {
