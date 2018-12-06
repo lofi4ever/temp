@@ -1,0 +1,23 @@
+h1 {
+  color: red;
+}
+
+p {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    color: green;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  h1 {
+    font-size: 50px;
+  }
+}
