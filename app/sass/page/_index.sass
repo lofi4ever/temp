@@ -1,11 +1,134 @@
-h1
-	color: red
-	+respond-below(sm)
-		color: green
-	+respond-between(xs, sm)
-		font-size: 50px
+.banner
+	min-height: 540px
+	position: relative
+	background-color: #d27801
+	background-position: center
+	background-size: 1480px
+	background-repeat: no-repeat
+	color: #fff
+	font-family: 'Fedra Sans Pro'
+	+respond-below(md)
+		background-position: 80% center
+	&__content
+		@extend %abs-center-v
+		max-width: 510px
+	&__h
+		font-size: 48px
+		font-weight: 700
+	&__sub
+		font-size: 32px
+		font-weight: 350
+		margin-top: 32px
+		.lg
+			font-size: 50px
+			font-weight: 700
 
-p
-	font-size: 16px
-	+respond-below(sm)
-		font-size: 14px
+.page
+	background-color: #fff
+	padding-top: 60px
+	&__header
+		text-align: center
+		margin-bottom: 54px
+	&__h
+		font-size: 35px
+		font-weight: 700
+		color: #000
+		font-weight: 700
+		line-height: 37px
+	&__sub
+		font-size: 25px
+		color: $accent
+		margin-top: 40px
+
+.buy-block
+	padding-top: 75px
+	padding-right: 280px
+	position: relative
+	margin-bottom: 70px
+	&__img
+		position: absolute
+		width: 244px
+		right: 0
+		top: 0 
+	&__h
+		color: #090909
+		font-size: 24px
+		line-height: 26px
+		font-weight: 700
+		.sm
+			font-weight: 400
+	&__sub
+		font-size: 22px
+		color: #090909
+		margin-top: 22px
+	&__middle
+		margin-top: 70px
+		margin-bottom: 50px
+		+supports-flex
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			justify-content: space-between
+	&__channels
+		img
+			display: inline-block
+			vertical-align: middle
+			max-width: 100px
+	&__hide
+		margin-top: 72px
+
+.price-block
+	text-transform: uppercase
+	&__top
+		line-height: 22.11px
+		font-size: 20px
+		color: #231f20
+		.lg
+			font-size: 56px
+			font-weight: 700
+			line-height: 63.99px
+	&__bottom
+		font-size: 20px
+		line-height: 24.36px
+		color: $accent
+
+.form-block
+	padding: 90px 58px
+	background-color: $accent
+	&__h
+		text-align: center
+		color: #fff
+		line-height: 37.1px
+		font-weight: 700
+		font-size: 38px
+
+.form
+	margin-top: 96px
+	&-group
+		text-align: center
+		&:not(:first-child)
+			margin-top: 42px
+		&--submit
+			margin-top: 54px
+			margin-bottom: 56px
+	&__input
+		&-text
+			background-color: #fff
+			max-width: 380px
+			padding: 0 20px
+			width: 100%
+			height: 74px
+			border: none;
+			&::placeholder
+				text-transform: uppercase
+				text-align: center
+	&__note
+		max-width: 280px
+		width: 100%
+		text-transform: uppercase
+		color: #fff
+		font-size: 15px
+		line-height: 17.62px
+		margin-top: 23px
+		margin-left: auto
+		margin-right: auto

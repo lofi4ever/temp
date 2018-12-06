@@ -1,23 +1,325 @@
-h1 {
-  color: red;
+.wrapper,
+.wrapper-small {
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
-p {
-  font-size: 16px;
+.banner__content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+body {
+  font-family: "Tahoma";
+}
+
+.wrapper {
+  max-width: 1200px;
+}
+
+.wrapper-small {
+  max-width: 1080px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@font-face {
+  font-family: "Fedra Sans Pro";
+  src: url("../fonts/FedraSansPro-Bold.eot");
+  src: url("../fonts/FedraSansPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/FedraSansPro-Bold.woff") format("woff"), url("../fonts/FedraSansPro-Bold.ttf") format("truetype"), url("../fonts/FedraSansPro-Bold.svg#FedraSansPro-Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fedra Sans Pro";
+  src: url("../fonts/FedraSansPro-Book.eot");
+  src: url("../fonts/FedraSansPro-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/FedraSansPro-Book.woff") format("woff"), url("../fonts/FedraSansPro-Book.ttf") format("truetype"), url("../fonts/FedraSansPro-Book.svg#FedraSansPro-Book") format("svg");
+  font-weight: 350;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fedra Sans Pro Normal";
+  src: url("../fonts/FedraSansPro-Normal.eot");
+  src: url("../fonts/FedraSansPro-Normal.eot?#iefix") format("embedded-opentype"), url("../fonts/FedraSansPro-Normal.woff") format("woff"), url("../fonts/FedraSansPro-Normal.ttf") format("truetype"), url("../fonts/FedraSansPro-Normal.svg#FedraSansPro-Normal") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tahoma';
+  src: url("../fonts/Tahoma-Bold.eot");
+  src: url("../fonts/Tahoma-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Tahoma-Bold.woff") format("woff"), url("../fonts/Tahoma-Bold.ttf") format("truetype"), url("../fonts/Tahoma-Bold.svg#Tahoma-Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tahoma';
+  src: url("../fonts/Tahoma.eot");
+  src: url("../fonts/Tahoma.eot?#iefix") format("embedded-opentype"), url("../fonts/Tahoma.woff") format("woff"), url("../fonts/Tahoma.ttf") format("truetype"), url("../fonts/Tahoma.svg#Tahoma") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  padding: 66px 0 52px;
+}
+
+.header__logo {
+  float: left;
+  display: block;
+  max-width: 330px;
+}
+
+.header__logo img {
+  display: block;
+  width: 100%;
+}
+
+.header__slogan {
+  font-family: "Fedra Sans Pro";
+  line-height: 31px;
+  float: right;
+  max-width: 360pxt;
+  color: #d40f7d;
+  font-size: 29px;
+}
+
+.banner {
+  min-height: 540px;
+  position: relative;
+  background-color: #d27801;
+  background-position: center;
+  background-size: 1480px;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-family: 'Fedra Sans Pro';
+}
+
+.banner__content {
+  max-width: 510px;
+}
+
+.banner__h {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.banner__sub {
+  font-size: 32px;
+  font-weight: 350;
+  margin-top: 32px;
+}
+
+.banner__sub .lg {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.page {
+  background-color: #fff;
+  padding-top: 60px;
+}
+
+.page__header {
+  text-align: center;
+  margin-bottom: 54px;
+}
+
+.page__h {
+  font-size: 35px;
+  font-weight: 700;
+  color: #000;
+  font-weight: 700;
+  line-height: 37px;
+}
+
+.page__sub {
+  font-size: 25px;
+  color: #d40f7d;
+  margin-top: 40px;
+}
+
+.buy-block {
+  padding-top: 75px;
+  padding-right: 280px;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.buy-block__img {
+  position: absolute;
+  width: 244px;
+  right: 0;
+  top: 0;
+}
+
+.buy-block__h {
+  color: #090909;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.buy-block__h .sm {
+  font-weight: 400;
+}
+
+.buy-block__sub {
+  font-size: 22px;
+  color: #090909;
+  margin-top: 22px;
+}
+
+.buy-block__middle {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+@supports (display: flex) {
+  .buy-block__middle {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.buy-block__channels img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100px;
+}
+
+.buy-block__hide {
+  margin-top: 72px;
+}
+
+.price-block {
+  text-transform: uppercase;
+}
+
+.price-block__top {
+  line-height: 22.11px;
+  font-size: 20px;
+  color: #231f20;
+}
+
+.price-block__top .lg {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 63.99px;
+}
+
+.price-block__bottom {
+  font-size: 20px;
+  line-height: 24.36px;
+  color: #d40f7d;
+}
+
+.form-block {
+  padding: 90px 58px;
+  background-color: #d40f7d;
+}
+
+.form-block__h {
+  text-align: center;
+  color: #fff;
+  line-height: 37.1px;
+  font-weight: 700;
+  font-size: 38px;
+}
+
+.form {
+  margin-top: 96px;
+}
+
+.form-group {
+  text-align: center;
+}
+
+.form-group:not(:first-child) {
+  margin-top: 42px;
+}
+
+.form-group--submit {
+  margin-top: 54px;
+  margin-bottom: 56px;
+}
+
+.form__input-text {
+  background-color: #fff;
+  max-width: 380px;
+  padding: 0 20px;
+  width: 100%;
+  height: 74px;
+  border: none;
+}
+
+.form__input-text::placeholder {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form__note {
+  max-width: 280px;
+  width: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 15px;
+  line-height: 17.62px;
+  margin-top: 23px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.link-underline {
+  color: #6d6e71;
+  line-height: 26px;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.btn {
+  font-size: 25px;
+  line-height: 26.1px;
+  color: #ffffff;
+  width: 280px;
+  padding: 24px 0;
+  text-align: center;
+  border-radius: 38px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--accent {
+  background-color: #d40f7d;
+}
+
+.btn--green {
+  background-color: #93c622;
+}
+
+@media (max-width: 992px) {
+  .banner {
+    background-position: 80% center;
+  }
 }
 
 @media (max-width: 768px) {
-  h1 {
-    color: green;
-  }
-
-  p {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
-  h1 {
-    font-size: 50px;
+  .header__slogan {
+    display: none;
   }
 }

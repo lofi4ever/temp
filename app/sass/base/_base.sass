@@ -1,0 +1,22 @@
+%wrapper
+	padding: 0 15px
+	margin: 0 auto
+%abs-center-v
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+
+body
+	font-family: $main-font
+.wrapper
+	@extend %wrapper
+	max-width: 1200px
+	&-small
+		@extend %wrapper
+		max-width: 1080px
+
+.clearfix
+	&:before, &:after
+		content: ""
+		display: block
+		clear: both
