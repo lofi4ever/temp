@@ -110,7 +110,7 @@ body {
 
 .footer__info {
   float: right;
-  max-width: 210px;
+  max-width: 243px;
   text-transform: uppercase;
   color: #000;
   line-height: 17px;
@@ -121,15 +121,25 @@ body {
   margin-bottom: 10px;
 }
 
+.footer__middle {
+  margin: 32px auto 34px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 35px;
+  text-transform: uppercase;
+  max-width: 243px;
+}
+
 .banner {
   min-height: 540px;
   position: relative;
   background-color: #d27801;
   background-position: center;
-  background-size: 1480px;
+  background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-family: 'Fedra Sans Pro';
+  background-image: url(../img/banner-bg.jpg);
 }
 
 .banner__content {
@@ -212,23 +222,27 @@ body {
   margin-bottom: 50px;
 }
 
-@supports (display: flex) {
-  .buy-block__middle {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+.buy-block__middle-item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 33%;
+  margin-right: -3px;
+}
+
+.buy-block__middle-item--left {
+  display: block;
 }
 
 .buy-block__channels img {
   display: inline-block;
   vertical-align: middle;
   max-width: 100px;
+  margin-bottom: 10px;
 }
 
 .buy-block__hide {
   margin-top: 72px;
+  display: table;
 }
 
 .price-block {
@@ -254,8 +268,9 @@ body {
 }
 
 .form-block {
-  padding: 90px 58px;
+  padding: 90px 0 58px;
   background-color: #d40f7d;
+  padding: 40px 0 40px;
 }
 
 .form-block__h {
@@ -376,6 +391,7 @@ body {
   display: table;
   table-layout: fixed;
   width: 100%;
+  margin-bottom: 94px;
 }
 
 .services-block {
@@ -386,6 +402,27 @@ body {
   text-transform: uppercase;
   color: #d40f7d;
   font-size: 18px;
+}
+
+.services-block__bottom {
+  margin-top: 14px;
+}
+
+.services-block__bottom--single .services-block__link {
+  width: 100%;
+  max-width: 272px;
+}
+
+.services-block__link {
+  display: inline-block;
+  width: 47%;
+  vertical-align: middle;
+  max-width: 128px;
+}
+
+.services-block__link img {
+  display: block;
+  width: 100%;
 }
 
 .link {
@@ -474,6 +511,26 @@ body {
   margin-bottom: 20px;
 }
 
+@media (min-width: 767px) {
+  .footer__middle {
+    display: none;
+  }
+
+  .buy-block__middle-item--left {
+    display: inline-block;
+    float: left;
+    margin-top: 28px;
+  }
+
+  .services-block:nth-child(2) {
+    text-align: center;
+  }
+
+  .services-block:last-child {
+    text-align: right;
+  }
+}
+
 @media (min-width: 991px) {
   .agreements-block__inner {
     margin-right: -16%;
@@ -487,7 +544,268 @@ body {
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 58px 0 55px;
+  }
+
+  .header__logo {
+    float: none;
+    margin: 0 auto;
+  }
+
   .header__slogan {
     display: none;
+  }
+
+  .footer__logo {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .footer__info {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .banner {
+    min-height: 1110px;
+    background-image: url(../img/banner-bg-sm.png);
+    background-position: 38% bottom;
+  }
+
+  .banner__content {
+    transform: none;
+    top: 0;
+    left: 0;
+    padding-top: 80px;
+    padding-left: 80px;
+  }
+
+  .buy-block {
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .buy-block__img {
+    position: static;
+    margin: 0 auto;
+    margin-bottom: 72px;
+  }
+
+  .buy-block__middle-item {
+    width: 49%;
+  }
+
+  .buy-block__middle-item--left {
+    width: 100%;
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  .buy-block__hide {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-block {
+    display: block;
+    text-align: center;
+  }
+
+  .services-block:not(:last-child) {
+    margin-bottom: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 21px 0 17px;
+  }
+
+  .header__logo {
+    max-width: 159px;
+  }
+
+  .footer__middle {
+    font-size: 12px;
+    line-height: 14.35px;
+  }
+
+  .banner {
+    min-height: 334px;
+  }
+
+  .banner__content {
+    padding-top: 18px;
+    padding-left: 20px;
+    max-width: 250px;
+  }
+
+  .banner__h {
+    font-size: 21px;
+  }
+
+  .banner__sub {
+    font-size: 14px;
+    margin-top: 14px;
+  }
+
+  .banner__sub .lg {
+    font-size: 22px;
+  }
+
+  .page {
+    padding-top: 32px;
+  }
+
+  .page__h {
+    font-size: 17px;
+    line-height: 17.34px;
+  }
+
+  .page__sub {
+    margin-top: 14px;
+    font-size: 13px;
+    line-height: 13.86px;
+  }
+
+  .buy-block__img {
+    margin-bottom: 30px;
+  }
+
+  .buy-block__h {
+    font-size: 13px;
+  }
+
+  .buy-block__sub {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  .buy-block__middle {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .buy-block__channels img {
+    max-width: 49px;
+  }
+
+  .buy-block__hide {
+    margin-top: 40px;
+  }
+
+  .price-block__top {
+    line-height: 11.69px;
+  }
+
+  .price-block__top .lg {
+    font-size: 29px;
+    line-height: 33.83px;
+  }
+
+  .price-block__top {
+    font-size: 11px;
+  }
+
+  .price-block__bottom {
+    font-size: 11px;
+  }
+
+  .form-block__h {
+    line-height: 18.39px;
+    font-size: 18px;
+  }
+
+  .form {
+    margin-top: 30px;
+  }
+
+  .form-group:not(:first-child) {
+    margin-top: 26px;
+  }
+
+  .form__input-text::placeholder {
+    font-size: 14px;
+  }
+
+  .form__input-text {
+    height: 45px;
+    box-sizing: border-box;
+  }
+
+  .socials {
+    padding: 50px 0 55px;
+  }
+
+  .socials-block__h {
+    font-size: 18px;
+  }
+
+  .socials-block__list {
+    margin-top: 24px;
+  }
+
+  .socials-block__item {
+    width: 40px;
+    height: 40px;
+    background-size: auto 40px;
+  }
+
+  .socials-block__item--vk {
+    background-position: -48px 0;
+  }
+
+  .socials-block__item--ok {
+    background-position: -95px 0;
+  }
+
+  .socials-block__item--inst {
+    background-position: -142px 0;
+  }
+
+  .socials-block__item--twitter {
+    background-position: -189px 0;
+  }
+
+  .services {
+    margin-bottom: 62px;
+  }
+
+  .services-block:not(:last-child) {
+    margin-bottom: 57px;
+  }
+
+  .services-block__h {
+    font-size: 13px;
+  }
+
+  .link-underline {
+    font-size: 13px;
+    line-height: 10.88px;
+  }
+
+  .btn {
+    width: 145px;
+    font-size: 13px;
+    line-height: 13.44px;
+    padding: 12px 0;
+  }
+
+  .checkbox__label {
+    font-size: 11px;
+    padding: 4px 0 8px 38px;
+  }
+
+  .checkbox__label:before {
+    width: 24px;
+    height: 22px;
+  }
+
+  .checkbox__input:checked ~ .checkbox__label:after {
+    width: 32px;
+    height: 32px;
+    top: -5px;
   }
 }

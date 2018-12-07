@@ -1,9 +1,18 @@
 .header
 	padding: 66px 0 52px
+	+respond-below(sm)
+		padding: 58px 0 55px
+	+respond-below(xs)
+		padding: 21px 0 17px
 	&__logo
 		float: left
 		display: block
 		max-width: 330px
+		+respond-below(sm)
+			float: none
+			margin: 0 auto
+		+respond-below(xs)
+			max-width: 159px
 		img
 			display: block
 			width: 100%

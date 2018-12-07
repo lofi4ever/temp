@@ -39,6 +39,14 @@ $breakpoints: (xxs: 360px, xs: 480px, sm: 768px, md: 992px, lg: 1200px)
 	@else
 		@error 'Invalid breakpoint'
 
+=hidden-above($breakpoint)
+	@if map-has-key($breakpoints, $breakpoint)
+		$query: map-get($breakpoints, $breakpoint)
+		@media (min-width: $query - 1)
+			display: none
+	@else
+		@error 'Invalid breakpoint'
+
 =supports-flex
 	@supports (display: flex)
 		@content

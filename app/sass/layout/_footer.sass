@@ -4,16 +4,33 @@
 	&__logo
 		max-width: 243px
 		float: left
+		+respond-below(sm)
+			float: none
+			margin: 0 auto
 		img
 			display: block
 			width: 100%
 	&__info
 		float: right
-		max-width: 210px
+		max-width: 243px
 		text-transform: uppercase
 		color: #000
 		line-height: 17px
 		font-size: 14px
+		+respond-below(sm)
+			float: none
+			margin: 0 auto
 		&-line
 			&:not(:last-child)
 				margin-bottom: 10px
+	&__middle
+		+hidden-above(sm)
+		margin: 32px auto 34px
+		font-size: 18px
+		font-weight: 400
+		line-height: 35px
+		text-transform: uppercase
+		max-width: 243px
+		+respond-below(xs)
+			font-size: 12px;
+			line-height: 14.35px;

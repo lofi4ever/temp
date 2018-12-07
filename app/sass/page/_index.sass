@@ -3,18 +3,37 @@
 	position: relative
 	background-color: #d27801
 	background-position: center
-	background-size: 1480px
+	background-size: cover 
 	background-repeat: no-repeat
 	color: #fff
 	font-family: 'Fedra Sans Pro'
+	background-image: url(../img/banner-bg.jpg)
 	+respond-below(md)
 		background-position: 80% center
+	+respond-below(sm)
+		min-height: 1110px
+		background-image: url(../img/banner-bg-sm.png)
+		background-position: 38% bottom
+	+respond-below(xs)
+		min-height: 334px
 	&__content
 		@extend %abs-center-v
 		max-width: 510px
+		+respond-below(sm)
+			transform: none 
+			top: 0
+			left: 0
+			padding-top: 80px
+			padding-left: 80px
+		+respond-below(xs)
+			padding-top: 18px
+			padding-left: 20px
+			max-width: 250px
 	&__h
 		font-size: 48px
 		font-weight: 700
+		+respond-below(xs)
+			font-size: 21px
 	&__sub
 		font-size: 32px
 		font-weight: 350
@@ -22,10 +41,17 @@
 		.lg
 			font-size: 50px
 			font-weight: 700
+		+respond-below(xs)
+			font-size: 14px
+			margin-top: 14px
+			.lg
+				font-size: 22px
 
 .page
 	background-color: #fff
 	padding-top: 60px
+	+respond-below(xs)
+		padding-top: 32px 
 	&__header
 		text-align: center
 		margin-bottom: 54px
@@ -35,21 +61,38 @@
 		color: #000
 		font-weight: 700
 		line-height: 37px
+		+respond-below(xs)
+			font-size: 17px
+			line-height: 17.34px
 	&__sub
 		font-size: 25px
 		color: $accent
 		margin-top: 40px
+		+respond-below(xs)
+			margin-top: 14px
+			font-size: 13px
+			line-height: 13.86px
 
 .buy-block
 	padding-top: 75px
 	padding-right: 280px
 	position: relative
 	margin-bottom: 70px
+	+respond-below(sm)
+		padding-right: 0
+		padding-top: 0
+		margin-bottom: 40px
 	&__img
 		position: absolute
 		width: 244px
 		right: 0
 		top: 0 
+		+respond-below(sm)
+			position: static
+			margin: 0 auto
+			margin-bottom: 72px
+		+respond-below(xs)
+			margin-bottom: 30px
 	&__h
 		color: #090909
 		font-size: 24px
@@ -57,25 +100,59 @@
 		font-weight: 700
 		.sm
 			font-weight: 400
+		+respond-below(xs)
+			font-size: 13px
 	&__sub
 		font-size: 22px
 		color: #090909
 		margin-top: 22px
+		+respond-below(xs)
+			font-size: 13px
+			margin-top: 10px
 	&__middle
 		margin-top: 70px
 		margin-bottom: 50px
-		+supports-flex
-			display: flex
-			align-items: center
-			flex-wrap: wrap
-			justify-content: space-between
+		// +supports-flex
+		// 	display: flex
+		// 	align-items: center
+		// 	flex-wrap: wrap
+		// 	justify-content: space-between
+		+respond-below(xs)
+			margin-top: 30px
+			margin-bottom: 40px
+		&-item
+			display: inline-block
+			vertical-align: middle
+			width: 33%
+			margin-right: -3px
+			+respond-below(sm)
+				width: 49%
+			&--left 
+				display: block
+				+respond-above(sm)
+					display: inline-block
+					float: left
+					margin-top: 28px
+				+respond-below(sm)
+					width: 100%
+					text-align: center
+					margin-top: 32px
 	&__channels
 		img
 			display: inline-block
 			vertical-align: middle
 			max-width: 100px
+			margin-bottom: 10px
+			+respond-below(xs)
+				max-width: 49px
 	&__hide
 		margin-top: 72px
+		display: table
+		+respond-below(sm)
+			margin-left: auto
+			margin-right: auto
+		+respond-below(xs)
+			margin-top: 40px
 
 .price-block
 	text-transform: uppercase
@@ -83,31 +160,49 @@
 		line-height: 22.11px
 		font-size: 20px
 		color: #231f20
+		+respond-below(xs)
+			line-height: 11.69px;
 		.lg
 			font-size: 56px
 			font-weight: 700
 			line-height: 63.99px
+			+respond-below(xs)
+				font-size: 29px
+				line-height: 33.83px
+		+respond-below(xs)
+			font-size: 11px
 	&__bottom
 		font-size: 20px
 		line-height: 24.36px
 		color: $accent
+		+respond-below(xs)
+			font-size: 11px
 
 .form-block
-	padding: 90px 58px
+	padding: 90px 0 58px
 	background-color: $accent
+	+respond-below(xs)
+	padding: 40px 0 40px
 	&__h
 		text-align: center
 		color: #fff
 		line-height: 37.1px
 		font-weight: 700
 		font-size: 38px
+		+respond-below(xs)
+			line-height: 18.39px;
+			font-size: 18px
 
 .form
 	margin-top: 96px
+	+respond-below(xs)
+		margin-top: 30px
 	&-group
 		text-align: center
 		&:not(:first-child)
 			margin-top: 42px
+			+respond-below(xs)
+				margin-top: 26px
 		&--submit
 			margin-top: 54px
 			margin-bottom: 56px
@@ -118,10 +213,15 @@
 			padding: 0 20px
 			width: 100%
 			height: 74px
-			border: none;
+			border: none
 			&::placeholder
 				text-transform: uppercase
 				text-align: center
+				+respond-below(xs)
+					font-size: 14px
+			+respond-below(xs)
+				height: 45px
+				box-sizing: border-box
 	&__note
 		max-width: 280px
 		width: 100%
@@ -136,6 +236,8 @@
 .socials
 	background-color: #fff
 	padding: 80px 0 130px
+	+respond-below(xs)
+		padding: 50px 0 55px
 	&-block
 		text-align: center
 		&__h
@@ -144,11 +246,15 @@
 			font-weight: 400
 			line-height: 26.1px
 			color: #090909
+			+respond-below(xs)
+				font-size: 18px
 		&__list
 			list-style-type: none
 			display: inline-block
 			padding-left: 0
 			margin-top: 55px
+			+respond-below(xs)
+				margin-top: 24px
 		&__item
 			display: inline-block
 			width: 68px
@@ -156,18 +262,30 @@
 			background-image: url(../img/soc-sprite.png)
 			background-size: auto 68px
 			background-repeat: no-repeat
+			+respond-below(xs)
+				width: 40px
+				height: 40px
+				background-size: auto 40px
 			&:not(:last-child)
 				margin-right: 5px
 			&--facebook
 				background-position: 0 0
 			&--vk
 				background-position: -82px 0
+				+respond-below(xs)
+					background-position: -48px 0
 			&--ok
 				background-position: -161px 0
+				+respond-below(xs)
+					background-position: -95px 0
 			&--inst
 				background-position: -242px 0
+				+respond-below(xs)
+					background-position: -142px 0
 			&--twitter
 				background-position: -321px 0
+				+respond-below(xs)
+					background-position: -189px 0
 		&__link
 			display: block
 			width: 100%
@@ -177,9 +295,41 @@
 	display: table
 	table-layout: fixed
 	width: 100%
+	margin-bottom: 94px
+	+respond-below(xs)
+		margin-bottom: 62px
 	&-block
 		display: table-cell
+		+respond-below(sm)
+			display: block
+			text-align: center
+			&:not(:last-child)
+				margin-bottom: 110px 
+		+respond-below(xs)
+			&:not(:last-child)
+				margin-bottom: 57px
+		+respond-above(sm)
+			&:nth-child(2)
+				text-align: center
+			&:last-child
+				text-align: right
 		&__h
 			text-transform: uppercase
 			color: $accent
 			font-size: 18px
+			+respond-below(xs)
+				font-size: 13px
+		&__bottom
+			margin-top: 14px
+			&--single
+				.services-block__link
+					width: 100%
+					max-width: 272px
+		&__link
+			display: inline-block
+			width: 47%
+			vertical-align: middle
+			max-width: 128px
+			img
+				display: block
+				width: 100%

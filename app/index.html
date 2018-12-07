@@ -19,7 +19,7 @@
 		</div>
 	</header>
 	<main class="main">
-		<section class="banner" style="background-image: url(img/banner-bg.jpg)">
+		<section class="banner">
 			<div class="wrapper">
 				<div class="banner__content">
 					<div class="banner__h">
@@ -49,14 +49,35 @@
 					<div class="services-block">
 						<img src="img/b-1.png" alt="" class="services-block__img">
 						<div class="services-block__h">Мобильное приложение</div>
+						<div class="services-block__bottom">
+							<a href="" class="services-block__link">
+								<img src="img/b-4.png" alt="">
+							</a>
+							<a href="" class="services-block__link">
+								<img src="img/b-5.png" alt="">
+							</a>
+						</div>
 					</div>
 					<div class="services-block">
 						<img src="img/b-2.png" alt="" class="services-block__img">
 						<div class="services-block__h">Через сайт</div>
+						<div class="services-block__bottom services-block__bottom--single">
+							<a href="" class="services-block__link">
+								<img src="img/b-6.png" alt="">
+							</a>
+						</div>
 					</div>
 					<div class="services-block">
 						<img src="img/b-3.png" alt="" class="services-block__img">
 						<div class="services-block__h">Приложение Smart TV</div>
+						<div class="services-block__bottom">
+							<a href="" class="services-block__link">
+								<img src="img/b-4.png" alt="">
+							</a>
+							<a href="" class="services-block__link">
+								<img src="img/b-5.png" alt="">
+							</a>
+						</div>
 					</div>
 				</div>
 
@@ -75,14 +96,20 @@
 							</div>
 						</div>
 						<div class="buy-block__middle">
-							<a href="#" class="link-underline show-all">показать все каналы</a>
-							<div class="price-block">
-								<div class="price-block__top">
-									<span class="lg">99</span> Руб
+							<div class="buy-block__middle-item">
+								<div class="price-block">
+									<div class="price-block__top">
+										<span class="lg">99</span> Руб
+									</div>
+									<div class="price-block__bottom">2 месяца</div>
 								</div>
-								<div class="price-block__bottom">2 месяца</div>
 							</div>
-							<div class="btn btn--accent">Выбрать</div>
+							<div class="buy-block__middle-item">
+								<div class="btn btn--accent">Выбрать</div>
+							</div>
+							<div class="buy-block__middle-item buy-block__middle-item--left">
+								<a href="#" class="link-underline show-all">показать все каналы</a>
+							</div>
 						</div>
 						<div class="buy-block__channels">
 							<img src="img/channel-1.png" alt="">
@@ -94,7 +121,7 @@
 							<img src="img/channel-1.png" alt="">
 						</div>
 					</div>
-					<div class="link-underline buy-block__hide">Скрыть</div>
+					<a href="#" class="link-underline buy-block__hide">Скрыть</a>
 				</div>
 
 				<div class="buy-block">
@@ -111,14 +138,20 @@
 							</div>
 						</div>
 						<div class="buy-block__middle">
-							<a href="#" class="link-underline show-all">показать все каналы</a>
-							<div class="price-block">
-								<div class="price-block__top">
-									<span class="lg">99</span> Руб
+							<div class="buy-block__middle-item">
+								<div class="price-block">
+									<div class="price-block__top">
+										<span class="lg">99</span> Руб
+									</div>
+									<div class="price-block__bottom">2 месяца</div>
 								</div>
-								<div class="price-block__bottom">2 месяца</div>
 							</div>
-							<div class="btn btn--accent">Выбрать</div>
+							<div class="buy-block__middle-item">
+								<div class="btn btn--accent">Выбрать</div>
+							</div>
+							<div class="buy-block__middle-item buy-block__middle-item--left">
+								<a href="#" class="link-underline show-all">показать все каналы</a>
+							</div>
 						</div>
 						<div class="buy-block__channels">
 							<img src="img/channel-1.png" alt="">
@@ -130,7 +163,7 @@
 							<img src="img/channel-1.png" alt="">
 						</div>
 					</div>
-					<div class="link-underline buy-block__hide">Скрыть</div>
+					<a href=# class="link-underline buy-block__hide">Скрыть</a>
 				</div>
 
 			</div>
@@ -139,18 +172,18 @@
 		<section class="form-block">
 			<div class="wrapper-small">
 				<div class="form-block__h">Заказать 2 месяца за 99 рублей!</div>
-				<div class="form js-form">
+				<div class="form js-form" id="form">
 					<div class="form-group">
 						<input type="text" class="form__input-text" placeholder="ФИО">
 					</div>
 					<div class="form-group">
-						<input type="text" class="form__input-text" placeholder="E-mail">
+						<input name="mail" type="text" class="form__input-text" placeholder="E-mail">
 					</div>
 					<div class="form-group">
-						<input type="text" class="form__input-text" placeholder="Телефон">
+						<input name="phone" type="text" class="form__input-text" placeholder="Телефон">
 					</div>
 					<div class="form-group">
-						<input type="text" class="form__input-text" placeholder="Номер карты доступа*">
+						<input name="card" type="text" class="form__input-text req" placeholder="Номер карты доступа*">
 					</div>
 					<div class="form__note">
 						*Поле заполняется абонентами
@@ -203,10 +236,17 @@
 		</section>
 	</main>
 
-	<footer class="footer test">
+	<footer class="footer">
 		<div class="wrapper clearfix">
 			<div class="footer__logo">
 				<img src="../img/logo.png" alt="">
+			</div>
+			<div class="footer__middle">
+				Если у вас возникли вопросы, вы можете
+				бесплатно и круглосуточно обратиться 
+				в наш контакт-центр по номеру
+				+7 (800) 100-104-7, или
++7 (495) 781-41-03(МСК)
 			</div>
 			<div class="footer__info">
 				<div class="footer__info-line">
@@ -222,5 +262,6 @@
 
 	<link rel="stylesheet" href="libs/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
+	<script src="js/common.js"></script>
 </body>
 </html>
