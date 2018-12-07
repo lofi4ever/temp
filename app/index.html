@@ -166,21 +166,63 @@
 					<a href=# class="link-underline buy-block__hide">Скрыть</a>
 				</div>
 
+				<div class="buy-block">
+					<div class="buy-block__img">
+						<img src="img/block-img-3.png" alt="">
+					</div>
+					<div class="buy-block__content">
+						<div class="buy-block__header">
+							<div class="buy-block__h">Мировое Кино Онлайн</div>
+							<div class="buy-block__sub">
+								Зарубежные и отечественный фильмы самых разных жанров 
+								в одном пакете. Собрание лучших телеканалов в ваших
+								устройствах!
+							</div>
+						</div>
+						<div class="buy-block__middle">
+							<div class="buy-block__middle-item">
+								<div class="price-block">
+									<div class="price-block__top">
+										<span class="lg">99</span> Руб
+									</div>
+									<div class="price-block__bottom">2 месяца</div>
+								</div>
+							</div>
+							<div class="buy-block__middle-item">
+								<div class="btn btn--accent">Выбрать</div>
+							</div>
+							<div class="buy-block__middle-item buy-block__middle-item--left">
+								<a href="#" class="link-underline show-all">показать все каналы</a>
+							</div>
+						</div>
+						<div class="buy-block__channels">
+							<img src="img/channel-1.png" alt="">
+							<img src="img/channel-1.png" alt="">
+							<img src="img/channel-1.png" alt="">
+							<img src="img/channel-1.png" alt="">
+							<img src="img/channel-1.png" alt="">
+							<img src="img/channel-1.png" alt="">
+							<img src="img/channel-1.png" alt="">
+						</div>
+					</div>
+					<a href=# class="link-underline buy-block__hide">Скрыть</a>
+				</div>
+
 			</div>
 		</section>
 
 		<section class="form-block">
 			<div class="wrapper-small">
 				<div class="form-block__h">Заказать 2 месяца за 99 рублей!</div>
-				<div class="form js-form" id="form">
+				<form class="form js-form" id="form">
 					<div class="form-group">
-						<input type="text" class="form__input-text" placeholder="ФИО">
+						<input type="text" class="form__input-text req" placeholder="ФИО">
 					</div>
 					<div class="form-group">
-						<input name="mail" type="text" class="form__input-text" placeholder="E-mail">
+						<input name="mail" type="text" class="form__input-text req" placeholder="E-mail">
 					</div>
 					<div class="form-group">
-						<input name="phone" type="text" class="form__input-text" placeholder="Телефон">
+						<input name="phone" type="text" class="form__input-text req" placeholder="Телефон">
 					</div>
 					<div class="form-group">
 						<input name="card" type="text" class="form__input-text req" placeholder="Номер карты доступа*">
@@ -190,25 +232,25 @@
 						спутникового ТВ Телекарта
 					</div>
 					<div class="form-group form-group--submit">
-						<input type="submit" class="btn btn--green js-submit" value="Подключить">
+						<input type="submit" id="form-submit" class="btn btn--green js-submit" value="Подключить">
 					</div>
 					<div class="agreements-block">
 						<div class="agreements-block__inner">
 							<div class="checkbox">
-								<input type="checkbox" id="agreement-1" class="checkbox__input">
+								<input type="checkbox" data-type="checkbox" id="agreement-1" class="checkbox__input req">
 								<label for="agreement-1" class="checkbox__label">вы соглашаетесь с условиями Публичной оферты. 
 									<a href="#" class="link-more">Подробрее</a>
 								</label>
 							</div>
 							<div class="checkbox">
-								<input type="checkbox" id="agreement-2" class="checkbox__input">
+								<input type="checkbox" data-type="checkbox" id="agreement-2" class="checkbox__input req">
 								<label for="agreement-2" class="checkbox__label">вы соглашаетесь на обработку персональных данных. 
 									<a href="#" class="link-more">Подробрее</a>
 								</label>
 							</div>
 						</div>
 					</div>
-				</div>
+				</form>
 			</div>
 		</section>
 
