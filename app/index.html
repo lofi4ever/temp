@@ -81,7 +81,7 @@
 					</div>
 				</div>
 
-				<div class="buy-block">
+				<div class="buy-block js-toggle">
 					<div class="buy-block__img">
 						<img src="img/block-img-1.png" alt="">
 					</div>
@@ -105,13 +105,13 @@
 								</div>
 							</div>
 							<div class="buy-block__middle-item">
-								<div class="btn btn--accent">Выбрать</div>
+								<div class="btn btn--accent js-scroll">Выбрать</div>
 							</div>
 							<div class="buy-block__middle-item buy-block__middle-item--left">
-								<a href="#" class="link-underline show-all">показать все каналы</a>
+								<a href="#" class="link-underline show-all js-toggle-btn js-toggle-show">показать все каналы</a>
 							</div>
 						</div>
-						<div class="buy-block__channels">
+						<div class="buy-block__channels js-toggle-content hidden">
 							<img src="img/channel-1.png" alt="">
 							<img src="img/channel-1.png" alt="">
 							<img src="img/channel-1.png" alt="">
@@ -121,10 +121,10 @@
 							<img src="img/channel-1.png" alt="">
 						</div>
 					</div>
-					<a href="#" class="link-underline buy-block__hide">Скрыть</a>
+					<a href="#" class="link-underline buy-block__hide js-toggle-btn js-toggle-hide hidden">Скрыть</a>
 				</div>
 
-				<div class="buy-block">
+				<div class="buy-block js-toggle">
 					<div class="buy-block__img">
 						<img src="img/block-img-2.png" alt="">
 					</div>
@@ -147,13 +147,13 @@
 								</div>
 							</div>
 							<div class="buy-block__middle-item">
-								<div class="btn btn--accent">Выбрать</div>
+								<div class="btn btn--accent js-scroll">Выбрать</div>
 							</div>
 							<div class="buy-block__middle-item buy-block__middle-item--left">
-								<a href="#" class="link-underline show-all">показать все каналы</a>
+								<a href="#" class="link-underline show-all js-toggle-btn js-toggle-show">показать все каналы</a>
 							</div>
 						</div>
-						<div class="buy-block__channels">
+						<div class="buy-block__channels js-toggle-content hidden">
 							<img src="img/channel-1.png" alt="">
 							<img src="img/channel-1.png" alt="">
 							<img src="img/channel-1.png" alt="">
@@ -163,10 +163,10 @@
 							<img src="img/channel-1.png" alt="">
 						</div>
 					</div>
-					<a href=# class="link-underline buy-block__hide">Скрыть</a>
+					<a href=# class="link-underline buy-block__hide js-toggle-btn js-toggle-hide hidden">Скрыть</a>
 				</div>
 
-				<div class="buy-block">
+				<div class="buy-block js-toggle">
 					<div class="buy-block__img">
 						<img src="img/block-img-3.png" alt="">
 					</div>
@@ -189,13 +189,13 @@
 								</div>
 							</div>
 							<div class="buy-block__middle-item">
-								<div class="btn btn--accent">Выбрать</div>
+								<div class="btn btn--accent js-scroll">Выбрать</div>
 							</div>
 							<div class="buy-block__middle-item buy-block__middle-item--left">
-								<a href="#" class="link-underline show-all">показать все каналы</a>
+								<a href="#" class="link-underline show-all js-toggle-btn js-toggle-show">показать все каналы</a>
 							</div>
 						</div>
-						<div class="buy-block__channels">
+						<div class="buy-block__channels js-toggle-content hidden">
 							<img src="img/channel-1.png" alt="">
 							<img src="img/channel-1.png" alt="">
 							<img src="img/channel-1.png" alt="">
@@ -205,13 +205,13 @@
 							<img src="img/channel-1.png" alt="">
 						</div>
 					</div>
-					<a href=# class="link-underline buy-block__hide">Скрыть</a>
+					<a href=# class="link-underline buy-block__hide js-toggle-btn js-toggle-hide hidden">Скрыть</a>
 				</div>
 
 			</div>
 		</section>
 
-		<section class="form-block">
+		<section class="form-block" id="form-block">;
 			<div class="wrapper-small">
 				<div class="form-block__h">Заказать 2 месяца за 99 рублей!</div>
 				<form class="form js-form" id="form">
@@ -239,13 +239,13 @@
 							<div class="checkbox">
 								<input type="checkbox" data-type="checkbox" id="agreement-1" class="checkbox__input req">
 								<label for="agreement-1" class="checkbox__label">вы соглашаетесь с условиями Публичной оферты. 
-									<a href="#" class="link-more">Подробрее</a>
+									<a href="https://online.telekarta.tv/#order" target="_blank" class="link-more">Подробрее</a>
 								</label>
 							</div>
 							<div class="checkbox">
 								<input type="checkbox" data-type="checkbox" id="agreement-2" class="checkbox__input req">
 								<label for="agreement-2" class="checkbox__label">вы соглашаетесь на обработку персональных данных. 
-									<a href="#" class="link-more">Подробрее</a>
+									<a href="https://www.telekarta.tv/confidential.html" target="_blank" class="link-more">Подробрее</a>
 								</label>
 							</div>
 						</div>
@@ -304,6 +304,7 @@
 
 	<link rel="stylesheet" href="libs/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
+	<script src="libs/smoothscroll.js"></script>
 	<script src="js/common.js"></script>
 </body>
 </html>
